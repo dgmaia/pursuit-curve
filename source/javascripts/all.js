@@ -37,14 +37,15 @@ $(document).ready(function() {
       sides = parseInt(4);
     }
     drawPattern(sides, distance, ctx);
+    clearDraw(inputs);
+    loop = 0;
+    inputsNumber = 0;
+    trianguloX = [];
+    trianguloY = [];
   });
 
   $('.column-left #clear').click(function(e) {
-    $.each( inputs, function(){
-      if ( ($(this).attr('id') != "distance") ) {
-        $(this).val("");
-      }
-    })
+    clearDraw(inputs);
     loop = 0;
     inputsNumber = 0;
     trianguloX = [];
